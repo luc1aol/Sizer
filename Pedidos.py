@@ -9,7 +9,9 @@ idPedidoActual=10
 #   Las fechas que necesitamos en el pedido son la fecha en que se confirmó el pedido y la de entrega 
 # 
 
-def nuevoPedido(id_cliente, productos):
+# Esta función recibe id del cliente y un diccionario de diccionarios
+# {{{producto1},{cantidad}},{producto2},{cantidad}}
+def nuevoPedido(cliente, producto_cantidad):
 
     id_pedido = idPedidoActual
 
@@ -20,7 +22,13 @@ def nuevoPedido(id_cliente, productos):
     # 
     # 
     
-    # Bloque para asignar la cantidad de los productos 
+    # Bloque para extraer los datos del diccionario producto_cantidad que pedimos por parametro
+    # 
+    # 
+
+    # Bloque para contabilizar el total del pedido en base a la cantidad y el costo de cada producto
+    # 
+    # 
 
     # Vamos a tener que retornar un diccionario que contenga toda la info junta
     return
