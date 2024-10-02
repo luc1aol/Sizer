@@ -1,0 +1,3 @@
+Forma de importar una función específica de un archivo en otro. Por ejemplo, si tengo una 
+    función en Archivo1.py y la necesito usar en Archivo2.py, la puedo usar de esta forma
+--> from Archivo import función
