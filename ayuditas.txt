@@ -1,3 +1,11 @@
 Forma de importar una función específica de un archivo en otro. Por ejemplo, si tengo una 
     función en Archivo1.py y la necesito usar en Archivo2.py, la puedo usar de esta forma
 --> from Archivo import función
+
+Forma de obtener las horas actuales con módulo Time:
+--> seconds = time.time()
+    result = time.localtime(seconds)
+    print("result:", result)
+    print("\naño:", result.tm_year)
+    print("horas:", result.tm_hour)
+    print("minutos:", result.tm_min)
