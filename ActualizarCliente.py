@@ -26,3 +26,4 @@ def actualizarCliente(dicClientes):
         print("Cliente actualizado exitosamente.")
     else:
         print(f"No se encontró un cliente con el DNI {dni}.")
+        

@@ -11,3 +11,4 @@ def dniValido(accion):
             return dni
         else:
             print("Error: El DNI debe tener 8 dígitos numéricos. Inténtelo de nuevo.")
+            

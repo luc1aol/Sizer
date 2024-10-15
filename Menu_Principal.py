@@ -8,7 +8,10 @@ def main():
     # Inicialización de variables
     #----------------------------------------------------------------------------------------------
     diccionarioClientes = {}
-    diccionarioProductos = {}
+    diccionarioProductos = {
+    'chomba': {'precio': 1500.0, 'stock': 100},
+    'remera': {'precio': 1200.0, 'stock': 200},
+    'pantalon': {'precio': 2500.0, 'stock': 150}}
     idPedidoActual = 0
 
     #-------------------------------------------------
