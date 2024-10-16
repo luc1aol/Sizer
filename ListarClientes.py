@@ -1,4 +1,5 @@
 def listarClientes(dicClientes):
+    print("-----------------------------------\n LISTADO CLIENTES\n-----------------------------------")
     if not dicClientes:
         print("No se encuentran clientes registrados.")
     else:

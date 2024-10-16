@@ -1,8 +1,14 @@
 from Validar import dniValido
 
 def cargarCliente(dicClientes):
+    print("-----------------------------------\n CARGAR CLIENTES \n-----------------------------------")
     while True:
         dni = dniValido("cargar")
+
+        # Verificar si el usuario desea finalizar
+        if dni == 0:
+            print("Finalizando carga de clientes...")
+            break
 
         if dni in dicClientes:
             print(f"El cliente con DNI: {dni} ya existe. Saltando...")
@@ -21,5 +27,4 @@ def cargarCliente(dicClientes):
             "telefono": telefono,
             "pedidos": {} #Esto se inicializa vacío para llenarlo a medida que se hagan pedidos
         }
-        
-        return dicClientes
+    return dicClientes

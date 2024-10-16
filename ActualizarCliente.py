@@ -1,7 +1,7 @@
 from Validar import dniValido
 
 def actualizarCliente(dicClientes):
-
+    print("-----------------------------------\n EDITAR CLIENTE\n-----------------------------------")
     dni = dniValido("actualizar")
     
     # Verificar si el DNI está en el diccionario de clientes

@@ -5,6 +5,7 @@ from ListarClientes import listarClientes
 
 from GenerarPedido import generarPedido
 from ListarPedidos import listarPedidos
+from CancelarPedidos import cancelarPedido
 
 def main():
     #-------------------------------------------------
@@ -12,7 +13,7 @@ def main():
     #----------------------------------------------------------------------------------------------
     dicClientes = {}
     dicProductos = {}
-    idPedidoActual = 0
+    idPedidoActual = 10
 
     #-------------------------------------------------
     # Bloque de menú
@@ -104,8 +105,7 @@ def main():
                 elif op=="2":
                     listarPedidos(dicClientes)
                 elif op=="3":
-                    # Cancelar un pedido
-                    ...
+                    cancelarPedido(dicClientes)
                 elif op=="4":
                     # Muestra el historial de pedidos para un cliente específico.
                     ...

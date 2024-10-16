@@ -1,9 +1,13 @@
 def listarPedidos(dicClientes):
+    print("-----------------------------------\n LISTAR PEDIDOS\n-----------------------------------")
     for dni, detalles in dicClientes.items():
             print(f"\nDNI del cliente: {dni}")
             
             # Acceder al diccionario de pedidos del cliente actual
             pedidos = detalles.get('pedidos', {})
+
+            if pedidos == {}:
+                print("    -No hay pedidos")
             
             # Recorred cada pedido de por cada cliente
             for idPedido, detalles in pedidos.items():

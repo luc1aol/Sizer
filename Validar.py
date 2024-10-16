@@ -4,7 +4,7 @@ def dniValido(accion):
     while True:
             dni = input(f"Ingrese el DNI del cliente para {accion} (0 para finalizar): ")
 
-            if dni == 0:
+            if dni == '0':
                 return int(dni)
             
             if re.match(r'^\d{8}$', str(dni)):
