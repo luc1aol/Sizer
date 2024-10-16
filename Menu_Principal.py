@@ -1,17 +1,17 @@
-import CargarClientes as cargarCliente
-import ActualizarCliente as actualizarCliente
-import EliminarCliente as eliminarCliente
-import ListarClientes as listarClientes
+from CargarClientes import cargarCliente
+from ActualizarCliente import actualizarCliente
+from EliminarCliente import eliminarCliente
+from ListarClientes import listarClientes
+
+from GenerarPedido import generarPedido
+from ListarPedidos import listarPedidos
 
 def main():
     #-------------------------------------------------
     # Inicialización de variables
     #----------------------------------------------------------------------------------------------
-    diccionarioClientes = {}
-    diccionarioProductos = {
-    'chomba': {'precio': 1500.0, 'stock': 100},
-    'remera': {'precio': 1200.0, 'stock': 200},
-    'pantalon': {'precio': 2500.0, 'stock': 150}}
+    dicClientes = {}
+    dicProductos = {}
     idPedidoActual = 0
 
     #-------------------------------------------------
@@ -67,13 +67,13 @@ def main():
                 if op == "0": # Opción salir del programa
                     break # No salimos del programa, volvemos al menú anterior
                 elif op == "1":   # Opción 1
-                    cargarCliente(diccionarioClientes)
+                    cargarCliente(dicClientes)
                 elif op == "2":   # Opción 2
-                    listarClientes(diccionarioClientes)
+                    listarClientes(dicClientes)
                 elif op == "3":   # Opción 3
-                    actualizarCliente(diccionarioClientes)
+                    actualizarCliente(dicClientes)
                 elif op == "4":   # Opción 4
-                    eliminarCliente(diccionarioClientes)
+                    eliminarCliente(dicClientes)
 
         elif opcion == "2":
             while True:
@@ -100,11 +100,9 @@ def main():
                 if op=="0":
                     break
                 elif op=="1":
-                    # Crear nuevo pedido
-                    ...
+                    generarPedido(dicClientes,dicProductos,idPedidoActual)
                 elif op=="2":
-                    # Listar todos los pedidos
-                    ...
+                    listarPedidos(dicClientes)
                 elif op=="3":
                     # Cancelar un pedido
                     ...

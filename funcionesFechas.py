@@ -33,7 +33,7 @@ def diaSiguiente(dia, mes, anio):
 def sumarDias(dia, mes, anio, n):
     for _ in range(n):
         dia, mes, anio = diaSiguiente(dia, mes, anio)
-    return [dia, mes, anio]
+    return f"{dia}/{mes}/{anio}"
 
 
 def generarFecha():
@@ -47,7 +47,7 @@ def generarFecha():
     minuto = result.tm_min
     seg = result.tm_sec
 
-    fechaPedido = [anio, mes, dia, hora, minuto, seg]
+    fechaPedido = f"{dia}/{mes}/{anio}  {hora}:{minuto}:{seg}"
     # Para la fecha de entrega, sabemos que son 15 días más por defecto
     fechaEntrega = sumarDias(dia, mes, anio, 15)
     

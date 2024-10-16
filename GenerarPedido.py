@@ -1,7 +1,6 @@
 from FuncionesFechas import generarFecha
 from Validar import dniValido
 
-# Diccionario de clientes de prueba
 dicClientes = {
     12345678: {
         "nombre": "Juan",
@@ -58,7 +57,7 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
 
         # Validamos
         if dni == 0:
-            print("Finalizando generación de pedidos...")
+            print("Finalizando...")
             break
         
         # Verificar que el cliente existe
@@ -105,7 +104,7 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
             while True:
                 talle = input("Ingrese el talle deseado: ")
                 if talle not in tallesDisp:
-                    print("Talle no válido. Por favor, elija un talle de los disponibles.")
+                    print("Talle no válido. Por favor, elija un talle disponible.")
                     continue
                 break
             
@@ -129,7 +128,7 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
                         'cantidad': cantidad,
                         'precio': productosDisp[producto_id]['precio']
                     }
-                    break  # Salir del bucle de cantidad si es válido
+                    break 
 
             # Asociar el pedido con el cliente
             if pedido:
@@ -143,7 +142,3 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
                 idPedidoActual += 1  # Incrementa el ID para el próximo pedido
             else:
                 print("No se agregó ningún producto al pedido.")
-            
-            print()
-# Ejecutar la función
-generarPedido(dicClientes, dicProductos, idPedidoActual)
