@@ -1,3 +1,11 @@
+# Importamos el módulo re para trabajar con expresiones regulares
+# Definimos la función dniValido que valida si el DNI ingresado es correcto
+# Entramos en un bucle infinito para pedir el DNI repetidamente hasta que sea válido
+# Solicitamos al usuario que ingrese un DNI, personalizando el mensaje con la acción
+# Si el usuario ingresa '0', se convierte a entero y se devuelve para finalizar la función
+# Usamos una expresión regular para verificar que el DNI tenga exactamente 8 dígitos
+# Si el DNI es válido (8 dígitos numéricos), lo convertimos a entero y lo retornamos
+# Si el DNI no tiene 8 dígitos, mostramos un mensaje de error
 import re
 
 def dniValido(accion):
