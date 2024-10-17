@@ -1,3 +1,10 @@
+# Definimos la función listarPedidos que toma como parámetro el diccionario de clientes
+# Recorremos el diccionario de clientes, donde 'dni' es la clave y 'detalles' es el valor
+# Accedemos al diccionario de pedidos del cliente actual usando el método 'get'
+# Si no tiene pedidos, devolvemos un diccionario vacío por defecto
+# Si el diccionario de pedidos está vacío, informamos que no hay pedidos
+# Si el cliente tiene pedidos, recorremos cada pedido en el diccionario 'pedidos'
+# Iteramos sobre los productos en el pedido. 'productos' es un diccionario dentro de 'detalles'
 def listarPedidos(dicClientes):
     print("-----------------------------------\n LISTAR PEDIDOS\n-----------------------------------")
     for dni, detalles in dicClientes.items():
@@ -9,14 +16,12 @@ def listarPedidos(dicClientes):
             if pedidos == {}:
                 print("    -No hay pedidos")
             
-            # Recorred cada pedido de por cada cliente
             for idPedido, detalles in pedidos.items():
                 print(f"  ID del pedido: {idPedido}")
                 print(f"    Fecha de pedido: {detalles['fecha']}")
                 print(f"    Fecha de entrega: {detalles['fecha_entrega']}")
                 print(f"    Productos:")
                 
-                # Iterar sobre los productos en el pedido
                 for producto_id, producto_info in detalles['productos'].items():
                     print(f"      - {producto_info['nombre_producto']}:")
                     print(f"        Cantidad: {producto_info['cantidad']} unidades")
