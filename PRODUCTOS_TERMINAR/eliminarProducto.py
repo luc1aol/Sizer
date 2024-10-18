@@ -10,7 +10,7 @@ def eliminarProducto(productos):
         # verifica si el producto existe
         if nombreProducto in productos:
             # se elimina el producto
-            productos.pop(nombreProducto)
+            productos.pop(nombreProducto)    #no se puede usar pop----   solucion: <del productos[nombreProducto]>
             print(f"Producto '{nombreProducto}' eliminado")
         else:
             print(f"No se encontró el producto '{nombreProducto}'")
