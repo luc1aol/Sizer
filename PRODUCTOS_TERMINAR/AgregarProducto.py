@@ -1,4 +1,4 @@
-from ActualizarStock import actualizarProducto
+from PRODUCTOS_TERMINAR.ActualizarStock import actualizarProducto
 
 def nuevoProducto(productos):
     '''

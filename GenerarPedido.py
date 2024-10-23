@@ -39,8 +39,8 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
         # Mostrar productos disponibles
         print("Productos disponibles:\n--------------------------")
         for llave, datos in productosDisp.items():
-            talles = ", ".join(datos['talles'])
-            print(f"{llave}: {datos['nombre_producto']} - {datos['descripcion']} - Marca: {datos['marca']} - Talles: {talles} - Precio: ${datos['precio']} - Stock: {datos['stock']} unidades")
+            talles = ", ".join(datos['talle'])
+            print(f"{llave}: {datos['Producto']} - {datos['descripcion']} - Marca: {datos['marca']} - Talles: {talles} - Precio: ${datos['precio']} - Stock: {datos['stock']} unidades")
         print("--------------------------")
 
         # Recibir selección de productos
@@ -58,8 +58,8 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
                 continue
 
             # Mostrar y seleccionar el talle
-            tallesDisp= productosDisp[producto_id]['talles']
-            print(f"Talles disponibles para {productosDisp[producto_id]['nombre_producto']}: {', '.join(tallesDisp)}")
+            tallesDisp= productosDisp[producto_id]['talle']
+            print(f"Talles disponibles para {productosDisp[producto_id]['Producto']}: {', '.join(tallesDisp)}")
             
             while True:
                 talle = input("Ingrese el talle deseado: ")
@@ -70,7 +70,7 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
             
             # Agregar la cantidad pedida
             while True:
-                cantidad = int(input(f"Ingrese la cantidad de {productosDisp[producto_id]['nombre_producto']} que desea (0 para cancelar): "))
+                cantidad = int(input(f"Ingrese la cantidad de {productosDisp[producto_id]['Producto']} que desea (0 para cancelar): "))
                 
                 # Salir del bucle de cantidad para seleccionar otro producto
                 if cantidad == 0:
@@ -84,7 +84,7 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
                     # Actualizar stock y agregar al pedido
                     productosDisp[producto_id]['stock'] -= cantidad
                     pedido[producto_id] = {
-                        'nombre_producto': productosDisp[producto_id]['nombre_producto'],
+                        'Producto': productosDisp[producto_id]['Producto'],
                         'cantidad': cantidad,
                         'precio': productosDisp[producto_id]['precio']
                     }

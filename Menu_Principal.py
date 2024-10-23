@@ -2,24 +2,31 @@ from CargarClientes import cargarCliente
 from ActualizarCliente import actualizarCliente
 from EliminarCliente import eliminarCliente
 from ListarClientes import listarClientes
-
 from GenerarPedido import generarPedido
-from ListarPedidos import listarPedidos
+#from ListarPedidos.Py import listarPedidos   ???
 from CancelarPedidos import cancelarPedido
+from PRODUCTOS_TERMINAR.ActualizarStock import actualizarProducto
+from PRODUCTOS_TERMINAR.ListarProductos import listarProductos
+from eliminarProducto import eliminarProducto
+from PRODUCTOS_TERMINAR.anadirProductos import agregarProducto
 
 def main():
     #-------------------------------------------------
     # Inicialización de variables
     #----------------------------------------------------------------------------------------------
     dicClientes = {}
-    dicProductos = {}
-    idPedidoActual = 10
+    dicProductos = {
+    1001: {"Producto": "Remera","descripcion": "Remera de algodón","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 10000,"stock": 10},
+    1002: {"Producto":"Chomba","descripcion": "Chomba de piqué poliester","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 15000,"stock": 15},
+    1003: {"Producto":"Pantalon","descripcion": "Algodon Rustico y frizado","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 15000,"stock": 20}
+    }
+    idPedidoActual = 1
 
     #-------------------------------------------------
     # Bloque de menú
     #----------------------------------------------------------------------------------------------
     while True:
-        opciones = 3
+        opciones = 4
         while True:
             print()
             print("---------------------------")
@@ -44,7 +51,7 @@ def main():
 
         elif opcion == "1":   # Opción 1
             while True:
-                opciones = 4
+                opciones = 5
                 while True:
                     print()
                     print("---------------------------")
@@ -78,7 +85,7 @@ def main():
 
         elif opcion == "2":
             while True:
-                opciones = 4
+                opciones = 6
                 while True:
                     print("---------------------------")
                     print("MENÚ DE PEDIDOS          ")
@@ -115,7 +122,7 @@ def main():
 
         elif opcion == "3":
             while True:
-                opciones = 4
+                opciones = 5
                 while True:
                     print()
                     print("---------------------------")
@@ -138,16 +145,16 @@ def main():
                     break
                 elif op=="1":
                     # Listar los productos
-                    ...
+                    listarProductos(dicProductos)
                 elif op=="2":
                     # Añadir productos nuevos al inventario
-                    ...
+                    agregarProducto(dicProductos)
                 elif op == "3":
                     # Actualizar el stock
-                    ...
-                elif op == "3":
+                    actualizarProducto(dicProductos)
+                elif op == "4":
                     # Eliminar un producto
-                    ...
+                    eliminarProducto(dicProductos)
 
 
         input("\nPresione ENTER para volver al menú.")
