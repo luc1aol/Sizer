@@ -1,4 +1,11 @@
 def agregarProducto(productos):
+    '''
+    - Agrega un nuevo producto a vender.
+    - Parámetros: 
+        Diccionario "productos": Nombre del producto, stock, precio.
+    -Retorno:
+        Diccionario "productos" con el o los nuevos productos agregados.
+    '''
     while True:
         nombreProducto = input("Ingrese el nombre del producto a añadir o '0' para volver: ")
         

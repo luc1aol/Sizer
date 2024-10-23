@@ -1,5 +1,12 @@
 # Funcion para eliminar un producto
 def eliminarProducto(productos):
+    '''
+    - Elimina uno o más productos.
+    - Parámetros: 
+        Diccionario "productos": Nombre del producto, stock, precio.
+    -Retorno:
+        Diccionario "productos" con el o los productos seleccionados eliminados.
+    '''
     while True:
         nombreProducto = input("Ingrese el nombre del producto que quiere eliminar o 0 para volver: ")
         

@@ -1,4 +1,11 @@
 def listarProductos(productos):
+    '''
+    - Imprime una lista de los productos con su precio y stock.
+    - Parámetros: 
+        Diccionario "productos": Nombre del producto, stock, precio.
+    -Retorno:
+        Impresión por pantalla del listado resultante.
+    '''
     if productos:
         print("\nListado de productos:")
         print("-----------------------------")

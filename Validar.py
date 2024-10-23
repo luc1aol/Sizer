@@ -9,6 +9,13 @@
 import re
 
 def dniValido(accion):
+    '''
+    - Valida el dni ingresado.
+    - Parámetros: 
+        accion
+    -Retorno:
+        DNI validado.
+    '''
     while True:
             dni = input(f"Ingrese el DNI del cliente para {accion} (0 para finalizar): ")
 
@@ -19,4 +26,18 @@ def dniValido(accion):
                 return int(dni)
             else:
                 print("Error: El DNI debe tener 8 dígitos numéricos. Inténtelo de nuevo.")
-            
+
+def telValido(accion):
+    '''
+    - Valida el número de telefono ingresado.
+    - Parámetros: 
+        accion
+    -Retorno:
+        Número de telefono validado.
+    '''
+    while True:
+        tel = input(f"Ingrese el telefono con código de país del cliente para {accion} (0 para finalizar): ")
+        if re.match("^\+\d",str(tel)):   
+             return tel
+        else:
+             print("Error, el número de telefono es incorrecto. Inténtelo nuevamente.")    

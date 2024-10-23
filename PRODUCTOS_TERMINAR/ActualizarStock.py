@@ -1,4 +1,11 @@
 def actualizarProducto(productos):
+    '''
+    - Actualiza el precio y/o el stock de los productos.
+    - Parámetros: 
+        Diccionario "productos": Nombre del producto, stock, precio.
+    -Retorno:
+        Diccionario "productos" con los parámetros actualizados.
+    '''
     while True:
         nombre_producto = input("Ingrese el nombre del producto a actualizar (o '0' para volver): ")
         

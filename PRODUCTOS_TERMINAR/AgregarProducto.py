@@ -1,6 +1,13 @@
-from actualizarStock import actualizarProducto
+from ActualizarStock import actualizarProducto
 
 def nuevoProducto(productos):
+    '''
+    - Agrega un nuevo producto a vender.
+    - Parámetros: 
+        Diccionario "productos": Nombre del producto, stock, precio.
+    -Retorno:
+        Diccionario "productos" con el o los nuevos productos agregados.
+    '''
     while True:
         productoNuevo = input("Ingrse el nombre del nuevo producto ('0' para volver): ")
         if productoNuevo == "0":

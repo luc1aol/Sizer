@@ -1,7 +1,14 @@
-from FuncionesFechas import generarFecha
+from funcionesFechas import generarFecha
 from Validar import dniValido
 
 def generarPedido(dicClientes, dicProductos, idPedidoActual):
+    '''
+    - Ingresa un nuevo pedido al sistema.
+    - Parámetros: 
+        Diccionario "dicClientes", diccionario "dicProductos" y variable "idPedidoActual" (autoincremental)
+    -Retorno:
+        Se asigna el pedido al ciente, con su fecha de pedido, fecha de entrega y los productos pedidos.
+    '''
 
     print("-----------------------------------\n GENERAR PEDIDO\n-----------------------------------")
 

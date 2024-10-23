@@ -1,6 +1,13 @@
 from Validar import dniValido
 
 def actualizarCliente(dicClientes):
+    '''
+    - Actualiza los datos de un cliente seleccionado (nombre, dirección o telefono).
+    - Parámetros: 
+        Diccionario "dicClientes", con la información de los clientes.
+    -Retorno:
+        Diccionario "dicClientes" con la información actualizada.
+    '''
     print("-----------------------------------\n EDITAR CLIENTE\n-----------------------------------")
     dni = dniValido("actualizar")
     
