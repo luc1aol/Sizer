@@ -3,7 +3,7 @@ from ActualizarCliente import actualizarCliente
 from EliminarCliente import eliminarCliente
 from ListarClientes import listarClientes
 from GenerarPedido import generarPedido
-#from ListarPedidos.Py import listarPedidos   ???
+from pedidosListar import listarPedidos
 from CancelarPedidos import cancelarPedido
 from PRODUCTOS_TERMINAR.ActualizarStock import actualizarProducto
 from PRODUCTOS_TERMINAR.ListarProductos import listarProductos
@@ -16,9 +16,9 @@ def main():
     #----------------------------------------------------------------------------------------------
     dicClientes = {}
     dicProductos = {
-    1001: {"Producto": "Remera","descripcion": "Remera de algodón","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 10000,"stock": 10},
-    1002: {"Producto":"Chomba","descripcion": "Chomba de piqué poliester","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 15000,"stock": 15},
-    1003: {"Producto":"Pantalon","descripcion": "Algodon Rustico y frizado","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 15000,"stock": 20}
+    1001: {"Producto": "Remera","descripcion": "Remera de algodón","marca": "Marca Escolar","talle": ['xs','s','m','l','xl','xxl'],"precio": 10000,"stock": 10},
+    1002: {"Producto":"Chomba","descripcion": "Chomba de piqué poliester","marca": "Marca Escolar","talle": ['xs','s','m','l','xl','xxl'],"precio": 15000,"stock": 15},
+    1003: {"Producto":"Pantalon","descripcion": "Algodon Rustico y frizado","marca": "Marca Escolar","talle": ['xs','s','m','l','xl','xxl'],"precio": 15000,"stock": 20}
     }
     idPedidoActual = 1
 
