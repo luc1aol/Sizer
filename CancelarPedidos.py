@@ -6,7 +6,7 @@ def cancelarPedido(dicClientes):
     - Parámetros: 
         Diccionario "dicClientes"
     -Retorno:
-        Se elimina el pedido seleccionado del dicClientes.
+        Se elimina el pedido seleccionado del dicClientes anclado a un cliente.
     '''
     print("-----------------------------------\n CANCELAR PEDIDO\n-----------------------------------")
     while True:
@@ -19,7 +19,8 @@ def cancelarPedido(dicClientes):
         if dni not in dicClientes:
             print(f"No se encontró un cliente con el DNI {dni}. Intente de nuevo.")
             continue
-
+        
+        # .get(key, valor por default)
         pedidos = dicClientes[dni].get('pedidos', {})
 
         if not pedidos:

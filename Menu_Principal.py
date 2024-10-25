@@ -3,11 +3,11 @@ from ActualizarCliente import actualizarCliente
 from EliminarCliente import eliminarCliente
 from ListarClientes import listarClientes
 from GenerarPedido import generarPedido
-from pedidosListar import listarPedidos
+from ListarPedido import listarPedidos
 from CancelarPedidos import cancelarPedido
 from PRODUCTOS_TERMINAR.ActualizarStock import actualizarProducto
 from PRODUCTOS_TERMINAR.ListarProductos import listarProductos
-from eliminarProducto import eliminarProducto
+from EliminarProducto import eliminarProducto
 from PRODUCTOS_TERMINAR.anadirProductos import agregarProducto
 
 def main():

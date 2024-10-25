@@ -10,7 +10,6 @@ def listarPedidos(dicClientes):
     for dni, detalles in dicClientes.items():
             print(f"\nDNI del cliente: {dni}")
             
-            # Acceder al diccionario de pedidos del cliente actual
             pedidos = detalles.get('pedidos', {})
 
             if pedidos == {}:

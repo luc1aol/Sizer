@@ -7,14 +7,14 @@ def actualizarProducto(productos):
         Diccionario "productos" con los parámetros actualizados.
     '''
     while True:
-        nombre_producto = input("Ingrese el nombre del producto a actualizar (o '0' para volver): ")
+        idProducto = input("Ingrese el ID del producto a actualizar (o 0 para volver): ")
         
-        if nombre_producto == '0':
+        if idProducto == '0':
             print("Volviendo al menú anterior.")
             break
         
-        if nombre_producto in productos:
-            print(f"Producto seleccionado: {nombre_producto}")
+        if idProducto in productos:
+            print(f"Producto seleccionado: {idProducto}")
             
             # Preguntar qué desea actualizar
             print("¿Qué desea actualizar?")
@@ -26,9 +26,9 @@ def actualizarProducto(productos):
             opcion = input("Seleccione una opción: ")
             
             if opcion == "1":
-                nuevo_precio = float(input(f"Ingrese el nuevo precio para {nombre_producto} (actual: ${productos[nombre_producto]['precio']}): "))
-                productos[nombre_producto]['precio'] = nuevo_precio
-                print(f"Precio actualizado a ${nuevo_precio} para {nombre_producto}.")
+                nuevo_precio = float(input(f"Ingrese el nuevo precio para {idProducto} (actual: ${productos[idProducto]['precio']}): "))
+                productos[idProducto]['precio'] = nuevo_precio
+                print(f"Precio actualizado a ${nuevo_precio} para {idProducto}.")
                 
             elif opcion == "2":
                 nuevo_stock = int(input(f"Ingrese el nuevo stock para {nombre_producto} (actual: {productos[nombre_producto]['stock']} unidades): "))
