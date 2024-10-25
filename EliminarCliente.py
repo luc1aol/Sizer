@@ -1,6 +1,13 @@
 from Validar import dniValido
 
 def eliminarCliente(dicClientes):
+    '''
+    - Elimina un cliente del sistema.
+    - Parámetros: 
+        Diccionario "dicClientes"
+    -Retorno:
+        Diccionario "dicClientes" con el cliente seleccionado eliminado.
+    '''
     print("-----------------------------------\n ELIMINAR CLIENTE\n-----------------------------------")
     dni = dniValido("darle de baja")
 

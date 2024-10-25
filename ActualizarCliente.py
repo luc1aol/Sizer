@@ -1,6 +1,13 @@
 from Validar import dniValido
 
 def actualizarCliente(dicClientes):
+    '''
+    - Actualiza los datos de un cliente seleccionado (nombre, dirección o telefono).
+    - Parámetros: 
+        Diccionario "dicClientes", con la información de los clientes.
+    -Retorno:
+        Diccionario "dicClientes" con la información actualizada.
+    '''
     print("-----------------------------------\n EDITAR CLIENTE\n-----------------------------------")
     dni = dniValido("actualizar")
     
@@ -8,13 +15,15 @@ def actualizarCliente(dicClientes):
     if dni in dicClientes:
         print("Cliente encontrado!")
         print(f"DNI: {dni}")
-        for key, value in dicClientes[dni].items():
-            print(f"  {key.capitalize()}: {value}")
+        for dni, detalles in dicClientes.items():
+            print(f"Nombre: {detalles['nombre']}")
+            print(f"Domicilio: {detalles['domicilio']}")
+            print(f"Teléfono: {detalles['telefono']}")
             
         # Solicitar nuevos datos
         nuevos_datos = {
             "nombre": input("Ingrese el nuevo nombre del cliente (dejar en blanco para no cambiar): "),
-            "direccion": input("Ingrese la nueva dirección del cliente (dejar en blanco para no cambiar): "),
+            "domicilio": input("Ingrese la nueva dirección del cliente (dejar en blanco para no cambiar): "),
             "telefono": input("Ingrese el nuevo teléfono del cliente (dejar en blanco para no cambiar): ")
         }   
 

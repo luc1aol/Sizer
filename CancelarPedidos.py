@@ -1,6 +1,13 @@
 from Validar import dniValido
 
 def cancelarPedido(dicClientes):
+    '''
+    - Cancela un pedido de un cliente seleccionado.
+    - Parámetros: 
+        Diccionario "dicClientes"
+    -Retorno:
+        Se elimina el pedido seleccionado del dicClientes.
+    '''
     print("-----------------------------------\n CANCELAR PEDIDO\n-----------------------------------")
     while True:
         dni = dniValido("cancelar sus pedidos")
