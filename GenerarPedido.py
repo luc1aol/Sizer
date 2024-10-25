@@ -1,4 +1,4 @@
-from FuncionesFechas import generarFecha
+from funcionesFechas import generarFecha
 from Validar import dniValido
 
 def generarPedido(dicClientes, dicProductos, idPedidoActual):

@@ -9,7 +9,7 @@ from CancelarPedidos import cancelarPedido
 
 def main():
     #-------------------------------------------------
-    # Inicialización de variables
+    # Inicializació2n de variables
     #----------------------------------------------------------------------------------------------
     dicClientes = {}
     dicProductos = {}
@@ -19,7 +19,7 @@ def main():
     # Bloque de menú
     #----------------------------------------------------------------------------------------------
     while True:
-        opciones = 3
+        opciones = 4
         while True:
             print()
             print("---------------------------")
@@ -44,7 +44,7 @@ def main():
 
         elif opcion == "1":   # Opción 1
             while True:
-                opciones = 4
+                opciones = 5
                 while True:
                     print()
                     print("---------------------------")
@@ -78,7 +78,7 @@ def main():
 
         elif opcion == "2":
             while True:
-                opciones = 4
+                opciones = 6
                 while True:
                     print("---------------------------")
                     print("MENÚ DE PEDIDOS          ")
@@ -115,7 +115,7 @@ def main():
 
         elif opcion == "3":
             while True:
-                opciones = 4
+                opciones = 5
                 while True:
                     print()
                     print("---------------------------")
