@@ -8,18 +8,18 @@ def eliminarProducto(productos):
         Diccionario "productos" con el o los productos seleccionados eliminados.
     '''
     while True:
-        nombreProducto = input("Ingrese el nombre del producto que quiere eliminar o 0 para volver: ")
+        idProducto = int(input("Ingrese el ID del producto que quiere eliminar o 0 para volver: "))
         
-        if nombreProducto == '0':
+        if idProducto == 0:
             print("Volviendo al menú")
             break
         
         # verifica si el producto existe
-        if nombreProducto in productos:
+        if idProducto in productos:
             # se elimina el producto
-            productos.pop(nombreProducto)    #no se puede usar pop----   solucion: <del productos[nombreProducto]>
-            print(f"Producto '{nombreProducto}' eliminado")
+            del productos[idProducto]    #no se puede usar pop----   solucion: <del productos[nombreProducto]>
+            print(f"Producto '{idProducto}' eliminado")
         else:
-            print(f"No se encontró el producto '{nombreProducto}'")
+            print(f"No se encontró el producto '{idProducto}'")
 
 
