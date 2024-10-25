@@ -1,4 +1,4 @@
-def mostrarProductos():   #todos los talles tienen el mismo precio
+"""def mostrarProductos():   #todos los talles tienen el mismo precio
     productos = {
     1001: {"Producto": "Remera","descripcion": "Remera de algodón","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 10000,"stock": 10},
     1002: {"Producto":"Chomba","descripcion": "Chomba de piqué poliester","marca": "Marca Escolar","talle": ['s','m','l','xl','xx'],"precio": 15000,"stock": 15},
@@ -77,4 +77,4 @@ def actualizarProducto():
             print(f"No se encontró un producto llamado '{nombreProductoID}'.")
 
 
-actualizarProducto()
+actualizarProducto()"""

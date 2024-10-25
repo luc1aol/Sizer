@@ -12,7 +12,7 @@ from PRODUCTOS_TERMINAR.anadirProductos import agregarProducto
 
 def main():
     #-------------------------------------------------
-    # Inicialización de variables
+    # Inicializació2n de variables
     #----------------------------------------------------------------------------------------------
     dicClientes = {}
     dicProductos = {
