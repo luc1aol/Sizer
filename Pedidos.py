@@ -1,4 +1,4 @@
-from FuncionesFechas import generarFecha
+from funcionesFechas import generarFecha
 from Validar import dniValido
 
 def generarPedido(dicClientes, dicProductos, idPedidoActual):
@@ -102,3 +102,79 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
                 idPedidoActual += 1  # Incrementa el ID para el próximo pedido
             else:
                 print("No se agregó ningún producto al pedido.")
+    return 
+# Definimos la función listarPedidos que toma como parámetro el diccionario de clientes
+# Recorremos el diccionario de clientes, donde 'dni' es la clave y 'detalles' es el valor
+# Accedemos al diccionario de pedidos del cliente actual usando el método 'get'
+# Si no tiene pedidos, devolvemos un diccionario vacío por defecto
+# Si el diccionario de pedidos está vacío, informamos que no hay pedidos
+# Si el cliente tiene pedidos, recorremos cada pedido en el diccionario 'pedidos'
+# Iteramos sobre los productos en el pedido. 'productos' es un diccionario dentro de 'detalles'
+def listarPedidos(dicClientes):
+    print("-----------------------------------\n LISTAR PEDIDOS\n-----------------------------------")
+    for dni, detalles in dicClientes.items():
+            print(f"\nDNI del cliente: {dni}")
+            
+            # Acceder al diccionario de pedidos del cliente actual
+            pedidos = detalles.get('pedidos', {})
+
+            if pedidos == {}:
+                print("    -No hay pedidos")
+            
+            for idPedido, detalles in pedidos.items():
+                print(f"  ID del pedido: {idPedido}")
+                print(f"    Fecha de pedido: {detalles['fecha']}")
+                print(f"    Fecha de entrega: {detalles['fecha_entrega']}")
+                print(f"    Productos:")
+                
+                for producto_id, producto_info in detalles['productos'].items():
+                    print(f"      - {producto_info['nombre_producto']}:")
+                    print(f"        Cantidad: {producto_info['cantidad']} unidades")
+                    print(f"        Precio unitario: ${producto_info['precio']}")
+                    print(f"        Subtotal: ${producto_info['cantidad'] * producto_info['precio']}")    
+    return 
+def cancelarPedido(dicClientes):
+    '''
+    - Cancela un pedido de un cliente seleccionado.
+    - Parámetros: 
+        Diccionario "dicClientes"
+    -Retorno:
+        Se elimina el pedido seleccionado del dicClientes anclado a un cliente.
+    '''
+    print("-----------------------------------\n CANCELAR PEDIDO\n-----------------------------------")
+    while True:
+        dni = dniValido("cancelar sus pedidos")
+
+        if dni == 0:
+            print("Finalizando...")
+            break
+
+        if dni not in dicClientes:
+            print(f"No se encontró un cliente con el DNI {dni}. Intente de nuevo.")
+            continue
+        
+        # .get(key, valor por default)
+        pedidos = dicClientes[dni].get('pedidos', {})
+
+        if not pedidos:
+            print(f"Este cliente no tiene pedidos activos.")
+            continue
+
+        print(f"Pedidos del cliente con DNI {dni}:")
+        for idPedido, detalles in pedidos.items():
+            print(f"  Pedido ID: {idPedido} - Fecha de pedido: {detalles['fecha']} - Fecha de entrega: {detalles['fecha_entrega']}")
+
+        idPedidoCancelar = int(input("Ingrese el ID del pedido que desea cancelar (0 para salir): "))
+
+        if idPedidoCancelar == 0:
+            print("Finalizando cancelación de pedidos...")
+            break
+
+        if idPedidoCancelar not in pedidos:
+            print(f"No se encontró un pedido con ID {idPedidoCancelar}. Intente nuevamente.")
+            continue
+
+        del dicClientes[dni]['pedidos'][idPedidoCancelar]
+        print(f"Pedido {idPedidoCancelar} cancelado exitosamente.")
+    
+    return dicClientes

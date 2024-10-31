@@ -1,14 +1,6 @@
-from CargarClientes import cargarCliente
-from ActualizarCliente import actualizarCliente
-from EliminarCliente import eliminarCliente
-from ListarClientes import listarClientes
-from GenerarPedido import generarPedido
-from ListarPedido import listarPedidos
-from CancelarPedidos import cancelarPedido
-from PRODUCTOS_TERMINAR.ActualizarStock import actualizarProducto
-from PRODUCTOS_TERMINAR.ListarProductos import listarProductos
-from EliminarProducto import eliminarProducto
-from PRODUCTOS_TERMINAR.anadirProductos import agregarProducto
+from Cliente import *
+from  Pedidos  import *
+from Productos import *
 
 def main():
     #-------------------------------------------------
