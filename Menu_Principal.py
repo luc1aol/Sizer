@@ -1,6 +1,6 @@
 from Cliente import *
 from  Pedidos  import *
-from Productos import *
+from productos import *
 
 def main():
     #-------------------------------------------------
