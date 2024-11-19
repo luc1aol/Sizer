@@ -67,13 +67,13 @@ def main():
                 if op == "0": # Opción salir del programa
                     break # No salimos del programa, volvemos al menú anterior
                 elif op == "1":   # Opción 1
-                    cargarCliente(dicClientes)
+                    cargarCliente()
                 elif op == "2":   # Opción 2
-                    listarClientes(dicClientes)
+                    listarClientes()
                 elif op == "3":   # Opción 3
-                    actualizarCliente(dicClientes)
+                    actualizarCliente()
                 elif op == "4":   # Opción 4
-                    eliminarCliente(dicClientes)
+                    eliminarCliente()
 
         elif opcion == "2":
             while True:

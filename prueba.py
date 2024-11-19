@@ -35,7 +35,7 @@ def cargarCliente():
         dni = dniValido("cargar")
 
         # Verificar si el usuario desea finalizar
-        if dni == "0":
+        if dni == 0:
             print("Finalizando carga de clientes...")
             break
         
@@ -140,3 +140,5 @@ def eliminarCliente():
     else:
         print(f"No se encontró un cliente con el DNI {dni}.")
     return
+
+actualizarCliente()

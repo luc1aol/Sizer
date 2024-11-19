@@ -20,10 +20,10 @@ def dniValido(accion):
             dni = input(f"Ingrese el DNI del cliente para {accion} (0 para finalizar): ")
 
             if dni == '0':
-                return int(dni)
+                return dni
             
             if re.match(r'^\d{8}$', dni):
-                return int(dni)
+                return dni
             else:
                 print("Error: El DNI debe tener 8 dígitos numéricos. Inténtelo de nuevo.")
 
