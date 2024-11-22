@@ -58,19 +58,7 @@ def generarPedido(dicProductos, idPedidoActual):
 
             if producto_id not in productosDisp:
                 print("Producto no válido o sin stock. Intente nuevamente.")
-                continue
-
-            # Mostrar y seleccionar el talle
-            tallesDisp= productosDisp[producto_id]['talle']
-            print(f"Talles disponibles para {productosDisp[producto_id]['Producto']}: {', '.join(tallesDisp)}")
-            
-            while True:
-                talle = input("Ingrese el talle deseado: ")
-                if talle not in tallesDisp:
-                    print("Talle no válido. Por favor, elija un talle disponible.")
-                    continue
-                break
-            
+                continue      
             # Agregar la cantidad pedida
             while True:
                 cantidad = int(input(f"Ingrese la cantidad de {productosDisp[producto_id]['Producto']} que desea (0 para cancelar): "))

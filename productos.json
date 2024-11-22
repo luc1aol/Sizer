@@ -1,0 +1,23 @@
+{
+    "1001": {
+        "Producto": "Remera",
+        "descripcion": "Remera de algodón",
+        "marca": "Marca Escolar",
+        "precio": 10000,
+        "talle": "Unico"
+    },
+    "1002": {
+        "Producto": "Chomba",
+        "descripcion": "Chomba de piqué poliéster",
+        "marca": "Marca Escolar",
+        "precio": 15000,
+        "talle": "Unico"
+    },
+    "1003": {
+        "Producto": "Pantalón",
+        "descripcion": "Algodón Rústico y Frizado",
+        "marca": "Marca Escolar",
+        "precio": 15000,
+        "talle": "Unico"
+    }
+}
