@@ -34,7 +34,7 @@ def cargarCliente():
         dni = dniValido("cargar")
 
         # Verificar si el usuario desea finalizar
-        if dni == "0":
+        if dni == 0:
             print("Finalizando carga de clientes...")
             break
         
