@@ -40,4 +40,4 @@ def telValido(accion):
         if re.match("^\+\d",tel):   
              return tel
         else:
-             print("Error, el número de telefono es incorrecto. Ej +5466578867 Inténtelo nuevamente.")    
+             print("Error, el número de telefono es incorrecto (Ej +5466578867). Inténtelo nuevamente.")    

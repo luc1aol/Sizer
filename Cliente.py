@@ -39,6 +39,7 @@ def cargarCliente():
             print("Finalizando carga de clientes...")
             break
         
+        # Invocamos el JSON que contiene el archivo de clientes
         dicClientes = cargarClientesDesdeArchivo()
 
         if dni in dicClientes:
@@ -60,14 +61,10 @@ def cargarCliente():
         }
 
         guardarClientesEnArchivo(dicClientes)
-    return 
 
 def listarClientes():
     '''
     - Imprime una lista de los clientes con sus datos (DNI, nombre completo, domicilio y telefono).
-    - Parámetros: 
-        Diccionario "dicClientes"
-    - Retorno: --
     '''
     dicClientes = cargarClientesDesdeArchivo()
     if not dicClientes:
@@ -78,19 +75,17 @@ def listarClientes():
         print("-" * 40)
         for dni, detalles in dicClientes.items():
             print(f"DNI: {dni}, Nombre: {detalles['nombre']}, Apellido: {detalles['apellido']}, Domicilio: {detalles['domicilio']}, Teléfono: {detalles['telefono']}")
-    return
 
 def actualizarCliente():
     '''
     - Actualiza los datos de un cliente seleccionado (nombre, dirección o telefono).
-    - Parámetros: 
-        Diccionario "dicClientes", con la información de los clientes.
     - Retorno:
         Diccionario "dicClientes" con la información actualizada.
     '''
     print("-----------------------------------\n EDITAR CLIENTE\n-----------------------------------")
     dni = dniValido("actualizar")
     dicClientes = cargarClientesDesdeArchivo()
+
     # Verificar si el DNI está en el diccionario de clientes
     print(dicClientes)
     if dni in dicClientes:
@@ -119,19 +114,17 @@ def actualizarCliente():
         guardarClientesEnArchivo(dicClientes)
     else:
         print(f"No se encontró un cliente con el DNI {dni}.")
-    return 
 
 def eliminarCliente():
     '''
     - Elimina un cliente del sistema.
-    - Parámetros: 
-        Diccionario "dicClientes"
     - Retorno:
         Diccionario "dicClientes" con el cliente seleccionado eliminado.
     '''
     print("-----------------------------------\n ELIMINAR CLIENTE\n-----------------------------------")
     dni = dniValido("darle de baja")
     dicClientes = cargarClientesDesdeArchivo()
+
     # Verificar si el DNI está en el diccionario
     if str(dni) in dicClientes:
         del dicClientes[dni]  # Eliminar el cliente
@@ -139,4 +132,3 @@ def eliminarCliente():
         guardarClientesEnArchivo(dicClientes)
     else:
         print(f"No se encontró un cliente con el DNI {dni}.")
-    return
