@@ -4,7 +4,7 @@ from Validar import dniValido, telValido
 def cargarClientesDesdeArchivo():
     '''Cargar los clientes desde un archivo JSON.'''
     try:
-        file = open("clientes.json", mode="r", encoding="utf-8")
+        file = open("proyecto.json", mode="r", encoding="utf-8")
         dicClientes = json.load(file)
         file.close()
         return dicClientes
