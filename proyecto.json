@@ -1,0 +1,219 @@
+{
+    "12345678": {
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "domicilio": "Calle Falsa 123",
+        "telefono": "+5423456789",
+        "pedidos": {}
+    },
+    "23456789": {
+        "nombre": "María",
+        "apellido": "López",
+        "domicilio": "Avenida Siempreviva 456",
+        "telefono": "+5487654321",
+        "pedidos": {}
+    },
+    "34567890": {
+        "nombre": "Carlos",
+        "apellido": "Gómez",
+        "domicilio": "Plaza Central 789",
+        "telefono": "+5467890123",
+        "pedidos": {}
+    },
+    "45678901": {
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "domicilio": "Calle Luna 321",
+        "telefono": "+5478901234",
+        "pedidos": {}
+    },
+    "56789012": {
+        "nombre": "Luis",
+        "apellido": "Rodríguez",
+        "domicilio": "Calle Sol 654",
+        "telefono": "+5490123456",
+        "pedidos": {}
+    },
+    "67890123": {
+        "nombre": "Sofía",
+        "apellido": "Sánchez",
+        "domicilio": "Avenida del Parque 12",
+        "telefono": "+5445678901",
+        "pedidos": {}
+    },
+    "78901234": {
+        "nombre": "Miguel",
+        "apellido": "Díaz",
+        "domicilio": "Calle Norte 98",
+        "telefono": "+5401234567",
+        "pedidos": {}
+    },
+    "89012345": {
+        "nombre": "Elena",
+        "apellido": "Morales",
+        "domicilio": "Avenida Sur 74",
+        "telefono": "+5434567890",
+        "pedidos": {}
+    },
+    "90123456": {
+        "nombre": "Pedro",
+        "apellido": "Ramírez",
+        "domicilio": "Calle Este 56",
+        "telefono": "+5423098456",
+        "pedidos": {}
+    },
+    "01234567": {
+        "nombre": "Lucía",
+        "apellido": "Torres",
+        "domicilio": "Calle Oeste 44",
+        "telefono": "+5467123890",
+        "pedidos": {}
+    },
+    "11223344": {
+        "nombre": "Javier",
+        "apellido": "Navarro",
+        "domicilio": "Plaza Mayor 22",
+        "telefono": "+5478345901",
+        "pedidos": {}
+    },
+    "22334455": {
+        "nombre": "Laura",
+        "apellido": "Méndez",
+        "domicilio": "Calle Roja 11",
+        "telefono": "+5490567123",
+        "pedidos": {}
+    },
+    "33445566": {
+        "nombre": "Raúl",
+        "apellido": "Vargas",
+        "domicilio": "Avenida Azul 23",
+        "telefono": "+5434890345",
+        "pedidos": {}
+    },
+    "44556677": {
+        "nombre": "Carmen",
+        "apellido": "Ibáñez",
+        "domicilio": "Calle Verde 90",
+        "telefono": "+5456901234",
+        "pedidos": {}
+    },
+    "55667788": {
+        "nombre": "Fernando",
+        "apellido": "Pacheco",
+        "domicilio": "Calle Amarilla 67",
+        "telefono": "+5489012345",
+        "pedidos": {}
+    },
+    "66778899": {
+        "nombre": "Patricia",
+        "apellido": "Lara",
+        "domicilio": "Plaza Rosa 32",
+        "telefono": "+5423456780",
+        "pedidos": {}
+    },
+    "77889900": {
+        "nombre": "Diego",
+        "apellido": "Serrano",
+        "domicilio": "Avenida Blanca 10",
+        "telefono": "+5434567890",
+        "pedidos": {}
+    },
+    "88990011": {
+        "nombre": "Verónica",
+        "apellido": "Herrera",
+        "domicilio": "Calle Dorada 45",
+        "telefono": "+5445678912",
+        "pedidos": {}
+    },
+    "99001122": {
+        "nombre": "Santiago",
+        "apellido": "Ortiz",
+        "domicilio": "Calle Plata 28",
+        "telefono": "+5456789012",
+        "pedidos": {}
+    },
+    "00112233": {
+        "nombre": "Isabel",
+        "apellido": "Ríos",
+        "domicilio": "Plaza Bronce 19",
+        "telefono": "+5467890123",
+        "pedidos": {}
+    },
+    "11001122": {
+        "nombre": "Andrés",
+        "apellido": "Arias",
+        "domicilio": "Calle Mármol 39",
+        "telefono": "+5478901234",
+        "pedidos": {}
+    },
+    "22002233": {
+        "nombre": "Rosa",
+        "apellido": "Muñoz",
+        "domicilio": "Avenida Piedras 7",
+        "telefono": "+5489012345",
+        "pedidos": {}
+    },
+    "33003344": {
+        "nombre": "José",
+        "apellido": "Peña",
+        "domicilio": "Calle Granito 84",
+        "telefono": "+5490123456",
+        "pedidos": {}
+    },
+    "44004455": {
+        "nombre": "Clara",
+        "apellido": "Roldán",
+        "domicilio": "Avenida Luna 61",
+        "telefono": "+5401234567",
+        "pedidos": {}
+    },
+    "55005566": {
+        "nombre": "Francisco",
+        "apellido": "Cruz",
+        "domicilio": "Calle Sol 49",
+        "telefono": "+5423456789",
+        "pedidos": {}
+    },
+    "66006677": {
+        "nombre": "Teresa",
+        "apellido": "Palacios",
+        "domicilio": "Calle Amanecer 25",
+        "telefono": "+5487654321",
+        "pedidos": {}
+    },
+    "77007788": {
+        "nombre": "Emilio",
+        "apellido": "Cordero",
+        "domicilio": "Plaza del Sol 37",
+        "telefono": "+5445678901",
+        "pedidos": {}
+    },
+    "88008899": {
+        "nombre": "Marta",
+        "apellido": "Reyes",
+        "domicilio": "Avenida Océano 17",
+        "telefono": "+5467890123",
+        "pedidos": {}
+    },
+    "99009900": {
+        "nombre": "Roberto",
+        "apellido": "López",
+        "domicilio": "Calle del Río 73",
+        "telefono": "+5478901234",
+        "pedidos": {}
+    },
+    "10101010": {
+        "nombre": "Paula",
+        "apellido": "Salazar",
+        "domicilio": "Avenida del Valle 6",
+        "telefono": "+5489012345",
+        "pedidos": {}
+    },
+    "12121212": {
+        "nombre": "Héctor",
+        "apellido": "Castro",
+        "domicilio": "Plaza Nueva 85",
+        "telefono": "+5490123456",
+        "pedidos": {}
+    }
+}
