@@ -18,7 +18,7 @@ def guardarClientesEnArchivo(dicClientes):
         file = open("clientes.json", mode="w", encoding="utf-8")
         json.dump(dicClientes, file, ensure_ascii=False, indent=4)
         file.close()
-    except (FileNotFoundError, OSError) as detalle:
+    except FileNotFoundError as detalle:
         print("Error al intentar abirir archivo:", detalle)
 
 def cargarCliente():
