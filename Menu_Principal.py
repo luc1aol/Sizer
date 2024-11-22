@@ -100,11 +100,11 @@ def main():
                 if op=="0":
                     break
                 elif op=="1":
-                    generarPedido(dicClientes,dicProductos,idPedidoActual)
+                    generarPedido(dicProductos,idPedidoActual)
                 elif op=="2":
-                    listarPedidos(dicClientes)
+                    listarPedidos()
                 elif op=="3":
-                    cancelarPedido(dicClientes)
+                    cancelarPedido()
                 elif op=="4":
                     # Muestra el historial de pedidos para un cliente específico.
                     ...

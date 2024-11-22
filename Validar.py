@@ -20,7 +20,7 @@ def dniValido(accion):
             dni = input(f"Ingrese el DNI del cliente para {accion} (0 para finalizar): ")
 
             if dni == '0':
-                return dni
+                return int(dni)
             
             if re.match(r'^\d{8}$', dni):
                 return dni

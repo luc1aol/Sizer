@@ -1,14 +1,13 @@
 import json
-from Validar import dniValido
-from Validar import telValido
+from Validar import dniValido, telValido
 
 def cargarClientesDesdeArchivo():
     '''Cargar los clientes desde un archivo JSON.'''
     try:
         file = open("clientes.json", mode="r", encoding="utf-8")
-        clientes = json.load(file)
+        dicClientes = json.load(file)
         file.close()
-        return clientes
+        return dicClientes
     except FileNotFoundError:
         # Si el archivo no existe, retornamos un diccionario vacío
         return {}

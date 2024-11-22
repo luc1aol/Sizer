@@ -1,7 +1,9 @@
+import json
+from Cliente import *
 from FuncionesFechas import generarFecha
 from Validar import dniValido
 
-def generarPedido(dicClientes, dicProductos, idPedidoActual):
+def generarPedido(dicProductos, idPedidoActual):
     '''
     - Ingresa un nuevo pedido al sistema.
     - Parámetros: 
@@ -11,6 +13,7 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
     '''
 
     print("-----------------------------------\n GENERAR PEDIDO\n-----------------------------------")
+    dicClientes = cargarClientesDesdeArchivo()
 
     while True:
         dni = dniValido("generar un pedido")
@@ -92,6 +95,15 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
 
             # Asociar el pedido con el cliente
             if pedido:
+
+                # ID AUTOINCREMENTAL
+                max_id_pedido = 0
+                for id_pedido in dicClientes[dni]['pedidos']:
+                    if int(id_pedido) > max_id_pedido:
+                        max_id_pedido = int(id_pedido)
+                
+                idPedidoActual = max_id_pedido + 1
+
                 fechaPedido, fechaEntrega = generarFecha()
                 dicClientes[dni]['pedidos'][idPedidoActual] = {
                     'fecha': fechaPedido,
@@ -99,10 +111,16 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
                     'productos': pedido
                 }
                 print(f"Pedido generado exitosamente con el ID: {idPedidoActual}")
+
+                # Guardar los datos actualizados en el archivo JSON
+                guardarClientesEnArchivo(dicClientes)
+
                 idPedidoActual += 1  # Incrementa el ID para el próximo pedido
             else:
                 print("No se agregó ningún producto al pedido.")
-    return 
+    return
+
+
 # Definimos la función listarPedidos que toma como parámetro el diccionario de clientes
 # Recorremos el diccionario de clientes, donde 'dni' es la clave y 'detalles' es el valor
 # Accedemos al diccionario de pedidos del cliente actual usando el método 'get'
@@ -110,8 +128,11 @@ def generarPedido(dicClientes, dicProductos, idPedidoActual):
 # Si el diccionario de pedidos está vacío, informamos que no hay pedidos
 # Si el cliente tiene pedidos, recorremos cada pedido en el diccionario 'pedidos'
 # Iteramos sobre los productos en el pedido. 'productos' es un diccionario dentro de 'detalles'
-def listarPedidos(dicClientes):
+def listarPedidos():
     print("-----------------------------------\n LISTAR PEDIDOS\n-----------------------------------")
+    
+    dicClientes = cargarClientesDesdeArchivo() 
+
     for dni, detalles in dicClientes.items():
             print(f"\nDNI del cliente: {dni}")
             
@@ -133,7 +154,9 @@ def listarPedidos(dicClientes):
                     print(f"        Precio unitario: ${producto_info['precio']}")
                     print(f"        Subtotal: ${producto_info['cantidad'] * producto_info['precio']}")    
     return 
-def cancelarPedido(dicClientes):
+
+
+def cancelarPedido():
     '''
     - Cancela un pedido de un cliente seleccionado.
     - Parámetros: 
@@ -142,6 +165,9 @@ def cancelarPedido(dicClientes):
         Se elimina el pedido seleccionado del dicClientes anclado a un cliente.
     '''
     print("-----------------------------------\n CANCELAR PEDIDO\n-----------------------------------")
+    
+    dicClientes = cargarClientesDesdeArchivo()
+    
     while True:
         dni = dniValido("cancelar sus pedidos")
 
@@ -176,5 +202,8 @@ def cancelarPedido(dicClientes):
 
         del dicClientes[dni]['pedidos'][idPedidoCancelar]
         print(f"Pedido {idPedidoCancelar} cancelado exitosamente.")
+
+        # Guardar los datos actualizados en el archivo JSON
+        guardarClientesEnArchivo(dicClientes)
     
     return dicClientes
