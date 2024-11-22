@@ -4,7 +4,19 @@
         "apellido": "Pérez",
         "domicilio": "Calle Falsa 123",
         "telefono": "+5423456789",
-        "pedidos": {}
+        "pedidos": {
+            "1": {
+                "fecha": "22/11/2024  17:12:9",
+                "fecha_entrega": "7/12/2024",
+                "productos": {
+                    "1001": {
+                        "Producto": "Remera",
+                        "cantidad": 10,
+                        "precio": 10000
+                    }
+                }
+            }
+        }
     },
     "23456789": {
         "nombre": "María",

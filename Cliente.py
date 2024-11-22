@@ -15,7 +15,7 @@ def cargarClientesDesdeArchivo():
 def guardarClientesEnArchivo(dicClientes):
     '''Guardar los clientes en un archivo JSON.'''
     try:
-        file = open("clientes.json", mode="w", encoding="utf-8")
+        file = open("proyecto.json", mode="w", encoding="utf-8")
         json.dump(dicClientes, file, ensure_ascii=False, indent=4)
         file.close()
     except (FileNotFoundError, OSError) as detalle:
