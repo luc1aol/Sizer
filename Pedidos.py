@@ -1,6 +1,6 @@
 import json
 from Cliente import *
-from FuncionesFechas import generarFecha
+from funcionesFechas import generarFecha
 from Validar import dniValido
 
 def generarPedido(dicProductos, idPedidoActual):
