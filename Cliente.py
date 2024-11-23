@@ -92,8 +92,8 @@ def actualizarCliente():
         detalles = dicClientes[dni]
         print(f"DNI: {dni}")
         print(f"Nombre: {detalles['nombre']}")
-        print(f"Domicilio: {detalles['domicilio']}")
         print(f"Apellido: {detalles['apellido']}")
+        print(f"Domicilio: {detalles['domicilio']}")
         print(f"Teléfono: {detalles['telefono']}")
         
         # Solicitar nuevos datos
