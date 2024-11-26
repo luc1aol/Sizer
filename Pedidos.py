@@ -137,7 +137,8 @@ def listarPedidos():
                 print(f"    Productos:")
                 
                 for producto_id, producto_info in detalles['productos'].items():
-                    print(f"      - {producto_info['nombre_producto']}:")
+                    print((f"  ID del producto: {producto_id}"))
+                    print(f"      - {producto_info['Producto']}:")
                     print(f"        Cantidad: {producto_info['cantidad']} unidades")
                     print(f"        Precio unitario: ${producto_info['precio']}")
                     print(f"        Subtotal: ${producto_info['cantidad'] * producto_info['precio']}")    
