@@ -3,21 +3,69 @@
         "Producto": "Remera",
         "descripcion": "Remera de algodón",
         "marca": "Marca Escolar",
-        "precio": 10000,
-        "talle": "Unico"
+        "talles": {
+            "s": {
+                "stock": 10
+            },
+            "m": {
+                "stock": 13
+            },
+            "l": {
+                "stock": 12
+            },
+            "xl": {
+                "stock": 11
+            },
+            "xx": {
+                "stock": 16
+            }
+        },
+        "precio": 10000
     },
     "1002": {
         "Producto": "Chomba",
-        "descripcion": "Chomba de piqué poliéster",
+        "descripcion": "Chomba de piqué poliester",
         "marca": "Marca Escolar",
-        "precio": 15000,
-        "talle": "Unico"
+        "talles": {
+            "s": {
+                "stock": 10
+            },
+            "m": {
+                "stock": 10
+            },
+            "l": {
+                "stock": 10
+            },
+            "xl": {
+                "stock": 10
+            },
+            "xx": {
+                "stock": 10
+            }
+        },
+        "precio": 15000
     },
     "1003": {
-        "Producto": "Pantalón",
-        "descripcion": "Algodón Rústico y Frizado",
+        "Producto": "Pantalon",
+        "descripcion": "Algodon Rustico y frizado",
         "marca": "Marca Escolar",
-        "precio": 15000,
-        "talle": "Unico"
+        "talles": {
+            "s": {
+                "stock": 10
+            },
+            "m": {
+                "stock": 10
+            },
+            "l": {
+                "stock": 10
+            },
+            "xl": {
+                "stock": 10
+            },
+            "xx": {
+                "stock": 10
+            }
+        },
+        "precio": 15000
     }
 }
