@@ -144,7 +144,7 @@ def main():
                 elif op == "4":
                     # Eliminar un producto
                     eliminarProducto(dicProductos)
-        guardarProductoEnArchivo(dicProductos)
+            guardarProductoEnArchivo(dicProductos)
 
         input("\nPresione ENTER para volver al menú.")
         print("\n\n")
