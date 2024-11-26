@@ -6,12 +6,6 @@ def main():
     #-------------------------------------------------
     # Inicializació2n de variables
     #-------------------------------------------------
-
-    dicProductos = {
-        1001: {"Producto": "Remera","descripcion": "Remera de algodón","marca": "Marca Escolar","talle": ['xs','s','m','l','xl','xxl'],"precio": 10000,"stock": 10},
-        1002: {"Producto":"Chomba","descripcion": "Chomba de piqué poliester","marca": "Marca Escolar","talle": ['xs','s','m','l','xl','xxl'],"precio": 15000,"stock": 15},
-        1003: {"Producto":"Pantalon","descripcion": "Algodon Rustico y frizado","marca": "Marca Escolar","talle": ['xs','s','m','l','xl','xxl'],"precio": 15000,"stock": 20}
-    }
     idPedidoActual = 1
 
     #-------------------------------------------------
@@ -100,7 +94,9 @@ def main():
                 if op=="0":
                     break
                 elif op=="1":
+                    dicProductos=cargarProductosDesdeArchivo()
                     generarPedido(dicProductos,idPedidoActual)
+                    guardarProductoEnArchivo(dicProductos)
                 elif op=="2":
                     listarPedidos()
                 elif op=="3":
@@ -113,6 +109,7 @@ def main():
                     ...
 
         elif opcion == "3":
+            dicProductos=cargarProductosDesdeArchivo()
             while True:
                 opciones = 5
                 while True:
@@ -147,7 +144,7 @@ def main():
                 elif op == "4":
                     # Eliminar un producto
                     eliminarProducto(dicProductos)
-
+        guardarProductoEnArchivo(dicProductos)
 
         input("\nPresione ENTER para volver al menú.")
         print("\n\n")
